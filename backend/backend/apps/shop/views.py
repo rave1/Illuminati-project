@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework.generics import ListAPIView
+from shop.serializer import ProductSerializer
+from shop.models import Product
+from rest_framework.pagination import PageNumberPagination
 
-# Create your views here.
+
+class ProductList(ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = ()
+    pagination_class = PageNumberPagination
