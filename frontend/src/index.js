@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ProductComponent from './components/Product_component'
+import Coffee from './images/Cup.png';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ProductComponent name='Kawa' price='14.99' image={Coffee}/>
+    <ProductComponent name='Kawa' price='14.99' image={Coffee}/>
+    <ProductComponent name='Kawa' price='14.99' image={Coffee}/>
   </React.StrictMode>
 );
 
