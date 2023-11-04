@@ -14,7 +14,7 @@ export default function ProductComponent(props) {
           <a href=''><h2>{name}</h2></a>
           <h3>{price} zł</h3>
         </div>
-        <button onClick={handleAddToCart}><img src={require('./images/Bag.png')} /></button>
+        <button onClick={handleAddToCart}><img src={require('..git /images/Bag.png')} /></button>
       </div>
     </div>
   );

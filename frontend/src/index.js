@@ -5,12 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductComponent from './components/Product_component'
 import Coffee from './images/Cup.png';
+import Header from './components/header/header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProductComponent name='Kawa' price='14.99' image={Coffee}/>
-    <ProductComponent name='Kawa' price='14.99' image={Coffee}/>
+    <Header />
     <ProductComponent name='Kawa' price='14.99' image={Coffee}/>
   </React.StrictMode>
 );
