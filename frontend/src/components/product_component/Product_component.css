@@ -1,4 +1,5 @@
   .product_component_box {
+
     max-width: 312px;
     max-height: 407px;
     display: flex;
@@ -6,7 +7,8 @@
     border-radius: 11px;
     border: 2px solid var(--gray-scale-gray-100, #d1caca);
     background: rgb(246, 242, 242);
-    margin: 5px;
+    margin-top: 300px;
+    margin-left: 300px;
   }
   
   .product_component_box > a {

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../images/main-logo.png';
 import cart from '../../images/cart.png';
+import search from '../../images/search-logo.png';
 import "./header.css";
 import "../../index.css";
 
@@ -18,7 +19,8 @@ export const Header = () => {
       </div>
       <div className="right-section">
         <div className="cart-logo-container">
-          <img src={cart} className='cart-logo'/>
+          <img src={cart} className='cart-logo' />
+          <p>2</p>
         </div>
         <div className="cart-price">
           <p>Shopping cart:</p>
