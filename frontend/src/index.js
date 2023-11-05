@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ProductComponent from './components/Product_component'
+import ProductComponent from './components/product_component/Product_component';
 import Coffee from './images/Cup.png';
 import Header from './components/header/header';
 
