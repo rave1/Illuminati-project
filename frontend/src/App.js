@@ -1,14 +1,12 @@
+import React from 'react'
+import Header from './components/header/header'
 
-import Header from './components/header/header';
-
-
-
-function App() {
+function App () {
   return (
     <div className="App">
       <Header />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,5 +1,4 @@
   .product_component_box {
-
     max-width: 312px;
     max-height: 407px;
     display: flex;
@@ -65,4 +64,3 @@
   .product_component_box_info_all button:hover {
     background-color: #a6771e;
   }
-  

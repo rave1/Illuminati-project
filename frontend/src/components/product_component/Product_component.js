@@ -1,12 +1,12 @@
-import './Product_component.css';
-import bag from '../../images/Bag.png';
+import React from 'react'
+import './Product_component.css'
+import bag from '../../images/Bag.png'
 
-
-export default function ProductComponent(props) {
-  const { name, price, image } = props;
+export default function ProductComponent (props) {
+  const { name, price, image } = props
 
   const handleAddToCart = () => {
-  };
+  }
 
   return (
     <div className='product_component_box'>
@@ -18,11 +18,8 @@ export default function ProductComponent(props) {
         </div>
         <button onClick={handleAddToCart}>
             <img src={bag} />
-          </button> 
+          </button>
       </div>
     </div>
-
-    
-    
-  );
+  )
 }
