@@ -21,5 +21,8 @@ export default function ProductComponent(props) {
           </button> 
       </div>
     </div>
+
+    
+    
   );
 }

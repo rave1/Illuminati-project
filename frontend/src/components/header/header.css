@@ -1,5 +1,5 @@
 .header {
-  height: 100px;
+  height: 75px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -21,7 +21,7 @@
 }
 
 .main-logo {
-  width: 120px;
+  width: 90px;
 }
 
 .middle-section {
@@ -37,7 +37,7 @@
 .search {
   width: 0px;
   flex: 1;
-  height: 40px;
+  height: 35px;
   padding-left: 20px;
   align-items: center;
   border-radius: 20px 0px 0px 20px;
@@ -52,7 +52,7 @@
 
 .search-button {
   width: 100px;
-  height: 44px;
+  height: 39.5px;
   margin-left: -5px;
   border: none;
   font-size: 15px;
@@ -68,7 +68,7 @@
 
 .right-section {
   display: flex;
-  height: 100px;
+  height: 75px;
   justify-content: center;
   align-items: center;
 }
@@ -76,6 +76,9 @@
 .cart-logo-container {
   padding-right: 13px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-logo-container p {
@@ -105,6 +108,51 @@
 .cart-price span {
   font-size: 18px;
   font-weight: 700;
-
 }
 
+.navi-bar {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  top: 75px;
+  right: 0;
+  left: 0;
+  height: 45px;
+  background-color: rgb(58, 57, 57);
+}
+
+.navi-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-weight: 400;
+}
+
+
+
+
+.n-list ul {
+  margin-left:  80px;
+  display: flex;
+  color: grey;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.n-list>ul>li:hover { 
+  cursor: pointer;
+  color: white;
+}
+
+.navi-right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  color: grey;
+}
+
+.phone-logo {
+  width: 30px;
+  margin-right: 10px;
+}
