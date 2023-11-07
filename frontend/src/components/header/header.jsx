@@ -42,7 +42,7 @@ export const Header = () => {
         </div>
         <div className="navi-right-side">
           <img src={phone} alt="" className="phone-logo" />
-          <p>(21) 37 2115 997</p>
+          <p>(21) 372 115 997</p>
         </div>
       </div>
     </div>
