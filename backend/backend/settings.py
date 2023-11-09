@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "shop",
     "accounts",
+    "django_filters",
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +58,11 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 1
+}
 
 ROOT_URLCONF = "backend.urls"
 
