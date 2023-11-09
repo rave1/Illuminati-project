@@ -9,4 +9,8 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = (
             'id', 'name', 'price', 'quantity',
             'description', 'image'
+<<<<<<< HEAD
         )
+=======
+        )
+>>>>>>> feat/views
