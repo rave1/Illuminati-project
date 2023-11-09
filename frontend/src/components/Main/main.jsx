@@ -2,7 +2,7 @@ import React from 'react'
 import './main.css'
 import cup from '../../images/Cup.png'
 
-function Product({image, name}) {
+function Product ({ image, name }) {
   return (
     <div className='product'>
              <img src={image} alt="" className="product-picture" />
@@ -10,7 +10,7 @@ function Product({image, name}) {
               <p>{name}</p>
             </div>
           </div>
-  );
+  )
 }
 
 const main = () => {
@@ -18,7 +18,7 @@ const main = () => {
     <div>
       <div className='info-bar'>
         <p>Popular categories</p>
-        <button>View all</button> 
+        <button>View all</button>
       </div>
       <div className='container'>
         <div className='main'>
@@ -41,4 +41,3 @@ const main = () => {
 }
 
 export default main
-

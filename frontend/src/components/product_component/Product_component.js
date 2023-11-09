@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Product_component.css'
-import bag from '../../images/Bag.png'
+import AddToCartButton from '../cart/AddToCartButton'
+import QuantityControl from '../cart/QuantityControl'
 
-function ProductComponent (props) {
-  const { id, name, price, quantity, description, image } = props
+export const ProductComponent = (props) => {
+  const { id, name, price, quantity, description, image, addToCart } = props
+  const [productQuantity, setProductQuantity] = useState(1)
 
   const handleAddToCart = () => {
+    const product = {
+      id,
+      name,
+      price,
+      quantity: productQuantity,
+      description,
+      image
+    }
+    addToCart(product)
+  }
+
+  const handleIncreaseQuantity = () => {
+    setProductQuantity(productQuantity + 1)
+  }
+
+  const handleDecreaseQuantity = () => {
+    if (productQuantity > 1) {
+      setProductQuantity(productQuantity - 1)
+    }
   }
 
   return (
@@ -16,9 +37,14 @@ function ProductComponent (props) {
           <a href=''><h2>{name}</h2></a>
           <h3>{price} zł</h3>
         </div>
-        <button onClick={handleAddToCart}>
-            <img src={bag} />
-          </button>
+        <div className='product_component_box_info_buttons'>
+          <QuantityControl
+          quantity={productQuantity}
+          onDecrease={handleDecreaseQuantity}
+          onIncrease={handleIncreaseQuantity}
+          />
+          <AddToCartButton onClick={handleAddToCart} />
+        </div>
       </div>
     </div>
   )
