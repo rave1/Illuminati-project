@@ -2,8 +2,8 @@ import React from 'react'
 import './Product_component.css'
 import bag from '../../images/Bag.png'
 
-export default function ProductComponent (props) {
-  const { name, price, image } = props
+function ProductComponent (props) {
+  const { id, name, price, quantity, description, image } = props
 
   const handleAddToCart = () => {
   }
@@ -23,3 +23,5 @@ export default function ProductComponent (props) {
     </div>
   )
 }
+
+export default ProductComponent

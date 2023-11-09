@@ -48,7 +48,7 @@
   }
   
   .product_component_box button {
-    background-color: #b78221;
+    background-color: rgba(140,106,82,255);
     border: none;
     border-radius: 50%;
     padding: 10px;
@@ -62,5 +62,5 @@
   }
 
   .product_component_box_info_all button:hover {
-    background-color: #a6771e;
+    background-color: #493715;
   }
