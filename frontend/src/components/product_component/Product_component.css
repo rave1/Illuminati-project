@@ -1,0 +1,83 @@
+  .product_component_box {
+    max-width: 312px;
+    max-height: 407px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+    border: 2px solid var(--gray-scale-gray-100, #d1caca);
+    background: rgb(246, 242, 242);
+    margin-top: 300px;
+    margin-left: 300px;
+  }
+  
+  .product_component_box > a {
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    gap: 10px;
+  }
+  
+  .product_component_box_info_all {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .product_component_box_info_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product_component_box_info_buttons quantity-controls {
+    max-width: 105px;
+    max-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product_component_box_info_name_price {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product_component_box_info_name_price a {
+    text-decoration: none;
+  }
+
+  .product_component_box_info_name_price > a > h2 {
+    color: var(--gray-scale-gray-700, #4D4D4D);
+    margin: 2px;
+  }
+  
+  .product_component_box_info_name_price > h3 {
+    gap: 2px;
+    margin: 2px;
+  }
+  
+  .product_component_box button {
+    background-color: rgba(140,106,82,255);
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    
+  }
+
+  .product_component_box_info_all button:hover {
+    background-color: #493715;
+  }
