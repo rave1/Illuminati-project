@@ -6,6 +6,8 @@ import phone from '../../images/phone-logo.png'
 import './header.css';
 import '../../index.css';
 
+
+
 export const Header = () => {
   return (
     <div className="header">

@@ -31,7 +31,10 @@ export const ProductComponent = (props) => {
 
   return (
     <div className='product_component_box'>
-      <a href=''><img src={image} alt="Product Image" /></a>
+      <div className='image-container'>
+         <a href=''><img src={image} alt="Product-Image" className='Product-Image'/></a>
+      </div>
+     
       <div className='product_component_box_info_all'>
         <div className='product_component_box_info_name_price'>
           <a href=''><h2>{name}</h2></a>
