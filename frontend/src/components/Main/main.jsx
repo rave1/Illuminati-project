@@ -3,7 +3,7 @@ import './main.css';
 import cup from '../../images/Cup.png';
 
 
-function Product({image, name}) {
+function Product ({ image, name }) {
   return (
     <div className='product'>
              <img src={cup} alt="" className="product-picture" />
@@ -11,7 +11,7 @@ function Product({image, name}) {
               <p>lorem</p>
             </div>
           </div>
-  );
+  )
 }
 
 function PopularProduct({image, name}) {
@@ -28,9 +28,16 @@ function PopularProduct({image, name}) {
 
 const main = () => {
   return (
+<<<<<<< HEAD
     <div className='main-container'>
       <div className='left-section'>
 
+=======
+    <div>
+      <div className='info-bar'>
+        <p>Popular categories</p>
+        <button>View all</button>
+>>>>>>> c194312e0a8f4dcfeb14be6a2ed4379f3dcb22eb
       </div>
       <div className="center-section">
         <div>
@@ -85,4 +92,3 @@ const main = () => {
 }
 
 export default main
-
