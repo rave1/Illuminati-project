@@ -61,7 +61,7 @@ Changes to be committed:
 
  ### Push the changes to origin repo (github)
  `git push origin BRANCH` - this command pushes local changes to remote repository (github)
- 
+
  example:
 
  ```ZSH
