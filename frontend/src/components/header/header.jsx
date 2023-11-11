@@ -5,14 +5,16 @@ import search from '../../images/search-logo.png';
 import phone from '../../images/phone-logo.png'
 import './header.css';
 import '../../index.css';
+import { Outlet, Link } from "react-router-dom";
 
 
 
 export const Header = () => {
   return (
+    <>
     <div className="header">
       <div className="left-section">
-       <img src={logo} alt="" className="main-logo" />
+        <Link to='/'><img src={logo} alt="" className="main-logo" /></Link>
       </div>
       <div className="middle-section">
         <input type="text" placeholder='Search' className="search" />
@@ -34,11 +36,21 @@ export const Header = () => {
         <div className="navi-left-side">
           <div className="n-list">
             <ul style={{ listStyleType: 'none' }}>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>Pages</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/shop'>Shop</Link>
+              </li>
+              <li>
+                <Link to='/pages'>Pages</Link>
+              </li>
+              <li>
+                <Link to='/aboutus'>About Us</Link>
+              </li>
+              <li>
+                <Link to='/contactus'>Contact Us</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -48,6 +60,8 @@ export const Header = () => {
         </div>
       </div>
     </div>
+    <Outlet />
+    </>
   )
 }
 
