@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 export const ShopPage = () => {
-    return (
+  return (
         <div>
             <ul>
                 <li>Shop</li>
@@ -16,5 +16,5 @@ export const ShopPage = () => {
                 <li>Shop</li>
             </ul>
         </div>
-    )
+  )
 }
