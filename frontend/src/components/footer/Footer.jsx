@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import logo from '../../images/main-logo.png';
-import './footer.css'
+import './footer.css';
 
-
-const footer = () => {
+const Footer = () => {
   return (
     <div className='footer'>
       <div className="container-footer">
@@ -19,37 +18,35 @@ const footer = () => {
           </div>
           <div className="info-footer">
             <p>My accounts</p>
-            <p>Order Histroy</p>
-            <p>Shoping Cart</p>
+            <p>Order History</p>
+            <p>Shopping Cart</p>
             <p>Wish List</p>
           </div>
           <div className="info-footer">
             <p>My accounts</p>
-            <p>Order Histroy</p>
-            <p>Shoping Cart</p>
+            <p>Order History</p>
+            <p>Shopping Cart</p>
             <p>Wish List</p>
           </div>
           <div className="info-footer">
             <p>My accounts</p>
-            <p>Order Histroy</p>
-            <p>Shoping Cart</p>
+            <p>Order History</p>
+            <p>Shopping Cart</p>
             <p>Wish List</p>
           </div>
           <div className="info-footer">
             <p>My accounts</p>
-            <p>Order Histroy</p>
-            <p>Shoping Cart</p>
+            <p>Order History</p>
+            <p>Shopping Cart</p>
             <p>Wish List</p>
           </div>
         </div>
         <div className="down-section">
           <p>Illuminati eCommerce @ 2023 All Right Reserved</p>
-          
         </div>
       </div>
-     
     </div>
-  )
-}
+  );
+};
 
-export default footer
+export default Footer;
