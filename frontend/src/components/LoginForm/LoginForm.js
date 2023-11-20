@@ -2,29 +2,27 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../context/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { redirect, useNavigate } from 'react-router-dom';
 
-const RegisterForm = () => {
+const LoginForm = () => {
   const {authDispatch, token} = useAuth();
   const [email, setEmail] = useState('');
-  const [password1, setPassword] = useState('');
-  const [password2, setSecondPassword] = useState('');
-  const navigate = useNavigate()
-
-  const handleRegister = async () => {
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const handleLogin = async () => {
     try {
-      const response = await axios.post(`http://${process.env.REACT_APP_BACKEND}/accounts/register/`, {
+      const response = await axios.post(`http://${process.env.REACT_APP_BACKEND}/accounts/login/`, {
         email,
-        password1,
-        password2,
+        password
       });
 
       const token = response.data.token;
       authDispatch({type: 'setToken', data: token})
       navigate('/')
     } catch (error) {
-      console.error('Registration failed', error);
+        console.error('Login failed', error);
     }
+    return redirect('/register');
   };
 
   return (
@@ -42,20 +40,13 @@ const RegisterForm = () => {
         <label>Password:</label>
         <input
           type="password"
-          value={password1}
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           style={styles.input}
         />
-        <label>Repeat Password:</label>
-        <input
-          type="password"
-          value={password2}
-          onChange={(e) => setSecondPassword(e.target.value)}
-          style={styles.input}
-        />
 
-        <button type="button" onClick={handleRegister} style={styles.button}>
-          Register
+        <button type="button" onClick={handleLogin} style={styles.button}>
+          Login
         </button>
       </form>
     </div>
@@ -94,4 +85,4 @@ const styles = {
   },
 };
 
-export default RegisterForm;
+export default LoginForm;

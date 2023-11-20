@@ -9,6 +9,7 @@ import { PagesPage } from './components/PagesPage/PagesPage.js'
 import { ShopPage } from './components/ShopPage/ShopPage.js'
 import RegisterForm from './components/RegisterForm/RegisterForm'
 import { AuthProvider } from './context/useAuth'
+import LoginForm from './components/LoginForm/LoginForm'
 
 function App () {
   return (
@@ -24,6 +25,7 @@ function App () {
                 <Route path='contactus' element={<ContactUsPage />} />
               </Route>
               <Route path='/register' element={<RegisterForm />}/>
+              <Route path='/login' element={<LoginForm />}/>
           </Routes>
         </Router>
       </AuthProvider>
