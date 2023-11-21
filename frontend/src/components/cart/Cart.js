@@ -4,6 +4,19 @@ import RemoveFromCartButton from './RemoveFromCartButton'
 import QuantityControl from './QuantityControl'
 
 const Cart = ({ cart, removeFromCart, updateQuantity }) => {
+  if (!cart) {
+    return (
+      <div>
+      <p>Your cart is empty</p>;
+      <p>Your cart is empty</p>;
+      <p>Your cart is empty</p>;
+      <p>Your cart is empty</p>;
+      <p>Your cart is empty</p>;
+      <p>Your cart is empty</p>;
+      </div>
+    )
+  }
+
   return (
     <div className="cart">
       <h2>Cart</h2>

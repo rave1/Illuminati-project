@@ -2,14 +2,11 @@ import React, { useEffect, useState } from 'react'
 import ProductComponent from './Product_component'
 import { Products } from './Products_data'
 import '../product_component/Product_component.css'
+import { CartProvider } from '../cart/CartContext'
 
 const AppContainer = () => {
   const initialCart = JSON.parse(localStorage.getItem('cart')) || []
   const [cart, setCart] = useState(initialCart)
-
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
 
   const addToCart = (product) => {
     const existingItem = cart.find(item => item.id === product.id)
@@ -40,14 +37,20 @@ const AppContainer = () => {
     }
   }
 
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
   return (
-    <div className="app">
-      <div className="products">
-        {Products.map((product) => (
-          <ProductComponent key={product.id} {...product} addToCart={addToCart} />
-        ))}
+    <CartProvider>
+      <div className="app">
+        <div className="products">
+          {Products.map((product) => (
+            <ProductComponent key={product.id} {...product} addToCart={addToCart} />
+          ))}
+        </div>
       </div>
-    </div>
+    </CartProvider>
   )
 }
 

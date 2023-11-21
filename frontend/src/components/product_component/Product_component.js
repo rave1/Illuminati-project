@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import './Product_component.css'
 import AddToCartButton from '../cart/AddToCartButton'
 import QuantityControl from '../cart/QuantityControl'
+import { useCart } from '../cart/CartContext'
 
 export const ProductComponent = (props) => {
-  const { id, name, price, quantity, description, image, addToCart } = props
+  const { id, name, price, quantity, description, image } = props
   const [productQuantity, setProductQuantity] = useState(1)
+  const { addToCart } = useCart()
 
   const handleAddToCart = () => {
     const product = {
@@ -34,7 +36,7 @@ export const ProductComponent = (props) => {
       <div className='image-container'>
          <a href=''><img src={image} alt="Product-Image" className='Product-Image'/></a>
       </div>
-     
+
       <div className='product_component_box_info_all'>
         <div className='product_component_box_info_name_price'>
           <a href=''><h2>{name}</h2></a>
