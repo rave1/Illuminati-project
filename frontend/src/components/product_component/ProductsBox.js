@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProductComponent from './Product_component'
-import Cart from '../cart/Cart'
 import { Products } from './Products_data'
-import '../product_component/Product_component.css';
+import '../product_component/Product_component.css'
+import { CartProvider } from '../cart/CartContext'
 
 const AppContainer = () => {
-  const [cart, setCart] = useState([])
+  const initialCart = JSON.parse(localStorage.getItem('cart')) || []
+  const [cart, setCart] = useState(initialCart)
 
   const addToCart = (product) => {
     const existingItem = cart.find(item => item.id === product.id)
@@ -36,14 +37,20 @@ const AppContainer = () => {
     }
   }
 
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
   return (
-    <div className="app">
-      <div className="products">
-        {Products.map((product) => (
-          <ProductComponent key={product.id} {...product} addToCart={addToCart} />
-        ))}
+    <CartProvider>
+      <div className="app">
+        <div className="products">
+          {Products.map((product) => (
+            <ProductComponent key={product.id} {...product} addToCart={addToCart} />
+          ))}
+        </div>
       </div>
-    </div>
+    </CartProvider>
   )
 }
 

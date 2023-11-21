@@ -18,5 +18,5 @@ export const ShopPage = () => {
                 <li>{token}</li>
             </ul>
         </div>
-    )
+  )
 }

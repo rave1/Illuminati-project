@@ -1,6 +1,6 @@
-import React from 'react';
-import './main.css';
-import AppContainer from '../product_component/ProductsBox';
+import React from 'react'
+import './main.css'
+import AppContainer from '../product_component/ProductsBox'
 
 function Product ({ image, name }) {
   return (
@@ -17,7 +17,6 @@ const main = () => {
   return (
     <div className='main-container'>
       <div className='left-section'>
-        
       </div>
       <div className="center-section">
         <div>
@@ -53,10 +52,7 @@ const main = () => {
             </div>
           </div>
         </div>
-      
-       
       <div className='right-section'>
-
       </div>
     </div>
   )

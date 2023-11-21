@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 export const AboutUsPage = () => {
-    return (
+  return (
         <div>
             <ul>
                 <li>AboutAs</li>
@@ -20,6 +20,5 @@ export const AboutUsPage = () => {
                 <li>AboutAs</li>
             </ul>
         </div>
-    )
+  )
 }
-
