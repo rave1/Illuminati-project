@@ -1,15 +1,22 @@
-import React from 'react';
-import logo from '../../images/main-logo.png';
-import cart from '../../images/cart.png';
-import search from '../../images/search-logo.png';
+import React, { useEffect, useState } from 'react'
+import logo from '../../images/main-logo.png'
+import cart from '../../images/cart.png'
+import search from '../../images/search-logo.png'
 import phone from '../../images/phone-logo.png'
-import './header.css';
-import '../../index.css';
-import { Outlet, Link } from "react-router-dom";
-
-
+import './header.css'
+import '../../index.css'
+import { Outlet, Link } from 'react-router-dom'
+import { useCart } from '../cart/CartContext'
 
 export const Header = () => {
+  const { cart: cartItems } = useCart()
+  const [cartQuantity, setCartQuantity] = useState(0)
+
+  useEffect(() => {
+    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0)
+    setCartQuantity(totalQuantity)
+  }, [cartItems])
+
   return (
     <>
     <div className="header">
@@ -23,10 +30,12 @@ export const Header = () => {
         </button>
       </div>
       <div className="right-section">
-        <div className="cart-logo-container">
-          <img src={cart} className='cart-logo' />
-          <p>2</p>
-        </div>
+        <Link to='cart'>
+          <div className="cart-logo-container">
+            <img src={cart} className='cart-logo' />
+            <p id="cart-quantity">{cartQuantity}</p>
+          </div>
+        </Link>
         <div className="cart-price">
           <p>Shopping cart:</p>
           <span>$57.00</span>
