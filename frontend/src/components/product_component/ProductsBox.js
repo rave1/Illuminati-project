@@ -3,6 +3,7 @@ import ProductComponent from './Product_component'
 import { Products } from './Products_data'
 import '../product_component/Product_component.css'
 import { CartProvider } from '../cart/CartContext'
+import axios from 'axios'
 
 const AppContainer = () => {
   const initialCart = JSON.parse(localStorage.getItem('cart')) || []
@@ -37,7 +38,15 @@ const AppContainer = () => {
     }
   }
 
+  const [products, setProducts] = useState([])
+
   useEffect(() => {
+    axios.get(`http://${process.env.REACT_APP_BACKEND}/shop/products/`)
+    .then((result) => {
+      console.log(result.data);
+      setProducts(result.data.results);
+    })
+    .catch((error) => console.log(error))
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
@@ -45,7 +54,7 @@ const AppContainer = () => {
     <CartProvider>
       <div className="app">
         <div className="products">
-          {Products.map((product) => (
+          {products.map((product) => (
             <ProductComponent key={product.id} {...product} addToCart={addToCart} />
           ))}
         </div>
