@@ -31,7 +31,6 @@ function App () {
               <Route path='/login' element={<LoginForm />}/>
           </Routes>
         </Router>
-        <Dropdown/>
       </AuthProvider>
   </div>
   )
