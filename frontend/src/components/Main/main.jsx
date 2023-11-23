@@ -1,6 +1,7 @@
 import React from 'react'
 import './main.css'
 import AppContainer from '../product_component/ProductsBox'
+import Dropdown from '../Dropdown/Dropdown'
 
 function Product ({ image, name }) {
   return (
