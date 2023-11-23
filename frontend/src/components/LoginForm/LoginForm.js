@@ -27,14 +27,15 @@ const LoginForm = () => {
 
   return (
     <div style={styles.container}>
-      <form style={styles.form}>
-        <h2>Register: {token}</h2>
+      <form className='flex flex-col w-5/6 md:w-1/3 bg-stone-100 p-14 rounded-xl space-y-2'>
+        <h2 className='font-serif text-2xl'>Login</h2>
         <label>Email:</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           style={styles.input}
+          className='transition duration-500 ease-in-out border-2 focus:bg-amber-200'
         />
 
         <label>Password:</label>
@@ -43,9 +44,10 @@ const LoginForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           style={styles.input}
+          className='transition duration-500 ease-in-out border-2 focus:bg-amber-200'
         />
 
-        <button type="button" onClick={handleLogin} style={styles.button}>
+        <button type="button" onClick={handleLogin} className="transition ease-in-out rounded outline outline-1 bg-amber-200 font-serif p-4 mx-8 text-xl hover:bg-amber-500">
           Login
         </button>
       </form>

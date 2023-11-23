@@ -11,6 +11,7 @@ import { CartProvider } from './components/cart/CartContext.js'
 import RegisterForm from './components/RegisterForm/RegisterForm'
 import { AuthProvider } from './context/useAuth'
 import LoginForm from './components/LoginForm/LoginForm'
+import Dropdown from './components/Dropdown/Dropdown'
 
 function App () {
   return (
@@ -30,6 +31,7 @@ function App () {
               <Route path='/login' element={<LoginForm />}/>
           </Routes>
         </Router>
+        <Dropdown/>
       </AuthProvider>
   </div>
   )
