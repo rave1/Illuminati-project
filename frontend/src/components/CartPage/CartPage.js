@@ -30,9 +30,14 @@ const CartPage = () => {
   }, [cart]);
 
   return (
-    <div>
+    <div className='mt-20'>
       <h2>Your Shopping Cart</h2>
-      <Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
+      <Cart
+      cart={cart}
+       removeFromCart={removeFromCart}
+        updateQuantity={updateQuantity}
+        className=''
+        />
       {/* Dodaj tutaj dodatkowe elementy strony koszyka, jeśli są potrzebne */}
     </div>
   );

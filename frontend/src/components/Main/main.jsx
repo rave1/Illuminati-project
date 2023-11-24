@@ -50,15 +50,15 @@ const main = () => {
 
   return (
     <div className='main-container'>
-      <div className='left-section'>
-      </div>
-      <div className="center-section">
+      {/* <div className='left-section'>
+      </div> */}
+      <div className="grid gap-4 mt-40">
         <div>
-          <div className='info-bar'>
+          <div className=''>
               <p className='info-p'>Popular categories</p>
             </div>
-            <div className='container'>
-                <div className='main'>
+            <div className='container grid gap-4'>
+                <div className='grid gap-4 grid-cols-1 md:grid-cols-2'>
                   {products.map((products) => {
                     return (
                       <ProductComponent key={products.id} {...products} addToCart={addToCart} />
@@ -68,19 +68,17 @@ const main = () => {
             </div>
           </div>
 
-          <div>
-          <div className='info-bar'>
+          <div className=''>
               <p className='info-p'>Popular Product</p>
             </div>
-            <div className='container'>
+            <div className='container grid gap-4'>
                 <div className='popular-main'>
                 <AppContainer/>
                 </div>
             </div>
-          </div>
         </div>
-      <div className='right-section'>
-      </div>
+      {/* <div className='right-section'>
+      </div> */}
     </div>
   )
 }
