@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "django_extensions",
     "rest_framework",
     "rest_framework.authtoken",
-    "corsheaders",
     "shop",
     "accounts",
     "django_filters",

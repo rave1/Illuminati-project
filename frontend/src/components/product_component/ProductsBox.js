@@ -3,6 +3,7 @@ import ProductComponent from './Product_component'
 import { Products } from './Products_data'
 import '../product_component/Product_component.css'
 import { CartProvider } from '../cart/CartContext'
+import axios from "axios";
 
 const AppContainer = () => {
   const initialCart = JSON.parse(localStorage.getItem('cart')) || []
@@ -38,8 +39,11 @@ const AppContainer = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
+    axios.get("http://127.0.0.1:8000/shop/products")
+      .then((response) => {
+        console.log(product);
+      })
+  }, []); 
 
   return (
     <CartProvider>
