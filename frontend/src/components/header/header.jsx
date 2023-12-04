@@ -7,6 +7,8 @@ import './header.css'
 import '../../index.css'
 import { Outlet, Link } from 'react-router-dom'
 import { useCart } from '../cart/CartContext'
+import UserIcon from '../../icons/UserIcon'
+import Dropdown from '../Dropdown/Dropdown'
 
 export const Header = () => {
   const { cart: cartItems } = useCart()
@@ -29,17 +31,18 @@ export const Header = () => {
           Search
         </button>
       </div>
-      <div className="right-section">
+      <div className="grid grid-cols-2 gap-4 place-content-center">
         <Link to='cart'>
           <div className="cart-logo-container">
             <img src={cart} className='cart-logo' />
             <p id="cart-quantity">{cartQuantity}</p>
           </div>
+          <span className="cart-price">$57.00</span>
         </Link>
-        <div className="cart-price">
-          <p>Shopping cart:</p>
-          <span>$57.00</span>
-        </div>
+        <button className='flex justify-items-center items-center w-full'>
+          <UserIcon/>
+          <Dropdown/>
+        </button>
       </div>
       <div className="navi-bar">
         <div className="navi-left-side">

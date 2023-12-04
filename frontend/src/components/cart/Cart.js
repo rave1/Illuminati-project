@@ -4,21 +4,24 @@ import RemoveFromCartButton from './RemoveFromCartButton'
 import QuantityControl from './QuantityControl'
 
 const Cart = ({ cart, removeFromCart, updateQuantity }) => {
+  console.log(cart)
   if (!cart) {
     return (
       <div>
-      <p>Your cart is empty</p>;
-      <p>Your cart is empty</p>;
-      <p>Your cart is empty</p>;
-      <p>Your cart is empty</p>;
-      <p>Your cart is empty</p>;
       <p>Your cart is empty</p>;
       </div>
     )
   }
 
+  function placeOrder(cart){
+    if (cart.length !== 0){
+      console.log(cart)
+      console.log(cart.map(({a}) => a))
+    }
+  }
+
   return (
-    <div className="cart">
+    <div className="cart mt-10 grid gap-4 h-screen">
       <h2>Cart</h2>
       <ul className='cart_box'>
         {cart.map((item) => (
@@ -35,6 +38,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
           </li>
         ))}
       </ul>
+      <button onClick={() => placeOrder(cart)} className="transition ease-in-out rounded outline outline-1 bg-amber-200 font-serif p-4 mx-8 text-xl hover:bg-amber-500">Złóż zamówienie</button>
     </div>
   )
 }
