@@ -31,7 +31,7 @@ class OrderList(ListCreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = (IsAuthenticated,)
     pagination_class = CustomPagination
-    filter_backends = (DjangoFilterBackend,OrderingFilter,SearchFilter)
+    filter_backends = (DjangoFilterBackend,OrderingFilter)
     filterset_class = OrderFilter
 
     def get_queryset(self):
