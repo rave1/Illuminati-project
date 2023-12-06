@@ -7,7 +7,7 @@ const Dropdown = () => {
       <>
         <Menu.Button>More</Menu.Button>
         {open && (
-          <div className='z-30'>
+          <div className='z-30 absolute top-full right-4 w-[200px] p-4 drop-shadow-lg rounded-md bg-white'>
             <Menu.Items static>
               <Menu.Item>
                 {({ active }) => (
@@ -16,9 +16,9 @@ const Dropdown = () => {
                       ? 'bg-gray-100 text-gray-900'
                       : 'text-gray-700'
                       } block px-4 py-2 text-sm`}
-                    href="/account-settings"
+                    href="/dashboard"
                   >
-                    Account settings
+                    My Orders
                   </a>
                 )}
               </Menu.Item>
@@ -31,14 +31,9 @@ const Dropdown = () => {
                       } block px-4 py-2 text-sm`}
                     href="/documentation"
                   >
-                    Documentation
+                    Logout
                   </a>
                 )}
-              </Menu.Item>
-              <Menu.Item disabled>
-                <span className="block px-4 py-2 text-sm text-gray-400">
-                  Invite a friend (coming soon!)
-                </span>
               </Menu.Item>
             </Menu.Items>
           </div>

@@ -27,7 +27,7 @@ const LoginForm = () => {
 
   return (
     <div style={styles.container}>
-      <form className='flex flex-col w-5/6 md:w-1/3 bg-stone-100 p-14 rounded-xl space-y-2'>
+      <form className='flex flex-col w-5/6 md:w-1/3 bg-stone-100 p-14 rounded-xl space-y-2 text-black'>
         <h2 className='font-serif text-2xl'>Login</h2>
         <label>Email:</label>
         <input
@@ -35,7 +35,7 @@ const LoginForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           style={styles.input}
-          className='transition duration-500 ease-in-out border-2 focus:bg-amber-200'
+          className='transition duration-500 ease-in-out border-2 focus:bg-amber-200 bg-white'
         />
 
         <label>Password:</label>
@@ -44,7 +44,7 @@ const LoginForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           style={styles.input}
-          className='transition duration-500 ease-in-out border-2 focus:bg-amber-200'
+          className='transition duration-500 ease-in-out border-2 focus:bg-amber-200 bg-white'
         />
 
         <button type="button" onClick={handleLogin} className="transition ease-in-out rounded outline outline-1 bg-amber-200 font-serif p-4 mx-8 text-xl hover:bg-amber-500">
@@ -60,7 +60,6 @@ const styles = {
     height: "100vh",
     display: 'grid',
     placeItems: 'center',
-
 },
   form: {
     display: 'flex',

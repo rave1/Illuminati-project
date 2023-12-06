@@ -39,7 +39,7 @@ export const Header = () => {
           </div>
           <span className="cart-price">$57.00</span>
         </Link>
-        <button className='flex justify-items-center items-center w-full'>
+        <button className='flex justify-items-center items-center w-full relative'>
           <UserIcon/>
           <Dropdown/>
         </button>

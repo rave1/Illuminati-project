@@ -27,10 +27,10 @@ function App () {
                 <Route path='aboutus' element={<AboutUsPage />} />
                 <Route path='contactus' element={<ContactUsPage />} />
                 <Route path='cart' element={<CartPage />} />
+                <Route path='/dashboard' element={<OrderTable/>}/>
+                <Route path='/register' element={<RegisterForm />}/>
+                <Route path='/login' element={<LoginForm />}/>
               </Route>
-              <Route path='/dashboard' element={<OrderTable/>}/>
-              <Route path='/register' element={<RegisterForm />}/>
-              <Route path='/login' element={<LoginForm />}/>
           </Routes>
         </Router>
       </AuthProvider>
