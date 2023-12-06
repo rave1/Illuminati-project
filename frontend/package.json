@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "daisyui": "^4.4.19",
     "eslint": "^8.53.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.0",

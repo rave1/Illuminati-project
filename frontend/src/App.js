@@ -12,6 +12,7 @@ import RegisterForm from './components/RegisterForm/RegisterForm'
 import { AuthProvider } from './context/useAuth'
 import LoginForm from './components/LoginForm/LoginForm'
 import Dropdown from './components/Dropdown/Dropdown'
+import OrderTable from './components/DashboardPage/DashboardPage'
 
 function App () {
   return (
@@ -27,6 +28,7 @@ function App () {
                 <Route path='contactus' element={<ContactUsPage />} />
                 <Route path='cart' element={<CartPage />} />
               </Route>
+              <Route path='/dashboard' element={<OrderTable/>}/>
               <Route path='/register' element={<RegisterForm />}/>
               <Route path='/login' element={<LoginForm />}/>
           </Routes>
