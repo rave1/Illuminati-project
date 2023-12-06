@@ -1,159 +1,63 @@
 import Cup from '../../images/Cup.png'
 import { useAuth } from '../../context/useAuth';
+import DashboardRow from './RowComponent';
 const OrderTable = () => {
     return (
-        <div className="w-screen flex flex-wrap gap-4 items-center justify-center">
-            <table className="table">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
-                        <th>Nazwa</th>
-                        <th>Opis</th>
-                        <th>Ilość </th>
-                        <th>Cena</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {/* row 1 */}
-                    <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
-                        <td>
-                            <div className="flex items-center gap-3">
-                                <div className="avatar">
-                                    <div className="mask mask-squircle w-12 h-12">
-                                        <img src={Cup} alt="Avatar Tailwind CSS Component" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="font-bold">Hart Hagerty</div>
-                                    <div className="text-sm opacity-50">United States</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            Zemlak, Daniel and Leannon
-                            <br />
-                            <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-                        </td>
-                        <td>Purple</td>
-                        <th>
-                            <button className="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    {/* row 2 */}
-                    <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
-                        <td>
-                            <div className="flex items-center gap-3">
-                                <div className="avatar">
-                                    <div className="mask mask-squircle w-12 h-12">
-                                        <img src={Cup} alt="Avatar Tailwind CSS Component" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="font-bold">Brice Swyre</div>
-                                    <div className="text-sm opacity-50">China</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            Carroll Group
-                            <br />
-                            <span className="badge badge-ghost badge-sm">Tax Accountant</span>
-                        </td>
-                        <td>Red</td>
-                        <th>
-                            <button className="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    {/* row 3 */}
-                    <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
-                        <td>
-                            <div className="flex items-center gap-3">
-                                <div className="avatar">
-                                    <div className="mask mask-squircle w-12 h-12">
-                                        <img src={Cup} alt="Avatar Tailwind CSS Component" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="font-bold">Marjy Ferencz</div>
-                                    <div className="text-sm opacity-50">Russia</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            Rowe-Schoen
-                            <br />
-                            <span className="badge badge-ghost badge-sm">Office Assistant I</span>
-                        </td>
-                        <td>Crimson</td>
-                        <th>
-                            <button className="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    {/* row 4 */}
-                    <tr>
-                        <th>
-                            <label>
-                                <input type="checkbox" className="checkbox" />
-                            </label>
-                        </th>
-                        <td>
-                            <div className="flex items-center gap-3">
-                                <div className="avatar">
-                                    <div className="mask mask-squircle w-12 h-12">
-                                        <img src={Cup} alt="Avatar Tailwind CSS Component" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="font-bold">Yancy Tear</div>
-                                    <div className="text-sm opacity-50">Brazil</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            Wyman-Ledner
-                            <br />
-                            <span className="badge badge-ghost badge-sm">Community Outreach Specialist</span>
-                        </td>
-                        <td>Indigo</td>
-                        <th>
-                            <button className="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                </tbody>
-                {/* foot */}
-                <tfoot>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
-                        <th></th>
-                    </tr>
-                </tfoot>
+    <div className='bg-brown h-screen flex items-center justify-center'>
 
-            </table>
+        <div className='bg-white w-[1200px] py-8  mx-auto- flex justify-center drop-shadow-2xl rounded-md'>
+            <div className="flex flex-col flex-wrap gap-10 items-center justify-center">
+                <h1 className='text-black text-3xl self-start'>Zamówienia</h1>
+                <table className="rounded-md bg-white text-black drop-shadow-lg overflow-hidden">
+                    {/* head */}
+                    <thead className=''>
+                        <tr>
+                            <th className='bg-yellow border text-left px-8 py-4'>
+                                <span className='text-black text-md self-start'>#2137</span>
+                            </th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Ilość</th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Nazwa</th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Opis</th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <DashboardRow/>
+                        <DashboardRow/>
+                        <DashboardRow/>
+                        <DashboardRow/>
+                    </tbody>
+                </table>
+                <table className="rounded-md bg-white text-black drop-shadow-lg overflow-hidden">
+                    {/* head */}
+                    <thead className=''>
+                        <tr>
+                        <th className='bg-yellow border text-left px-8 py-4'>
+                                <span className='text-black text-md self-start'>#2137</span>
+                            </th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Ilość</th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Nazwa</th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Opis</th>
+                            <th className='bg-yellow border text-left px-8 py-4'>Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <DashboardRow/>
+                        <DashboardRow/>
+                        <DashboardRow/>
+                        <DashboardRow/>
+                    </tbody>
+                </table>
+            <div className="join rounded-md overflow-hidden">
+                <button className="join-item btn text-beaver px-2">1</button>
+                <button className="join-item btn text-beaver px-2 ">2</button>
+                <button className="join-item btn text-beaver px-2 btn-disabled">...</button>
+                <button className="join-item btn text-beaver px-2 ">99</button>
+                <button className="join-item btn text-beaver px-2">100</button>
+            </div>
+            </div>
         </div>
+    </div>
     )
 }
 export default OrderTable;

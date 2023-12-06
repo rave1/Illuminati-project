@@ -1,33 +1,33 @@
+import Cup from '../../images/Cup.png'
 export const DashboardRow = (props) => {
     return (
         <tr>
-        <th>
-            <label>
-                <input type="checkbox" className="checkbox" />
-            </label>
-        </th>
-        <td>
-            <div className="flex items-center gap-3">
-                <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                        <img src={Cup} alt="Avatar Tailwind CSS Component" />
+            <th className='text-center px-8 py-4'>
+                <label>
+                    <input type="checkbox" className="checkbox" />
+                </label>
+            </th>
+            <td className='px-8 py-4'>2137</td>
+            <td className='px-8 py-4'>
+                <div className="flex items-center gap-3">
+                    <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
+                            <img src={Cup} alt="Avatar Tailwind CSS Component" />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="font-bold">Kawa</div>
+                        <div className="text-sm opacity-50">lorem</div>
                     </div>
                 </div>
-                <div>
-                    <div className="font-bold">Hart Hagerty</div>
-                    <div className="text-sm opacity-50">United States</div>
-                </div>
-            </div>
-        </td>
-        <td>
-            Zemlak, Daniel and Leannon
-            <br />
-            <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-        </td>
-        <td>Purple</td>
-        <th>
-            <button className="btn btn-ghost btn-xs">details</button>
-        </th>
-    </tr>
+            </td>
+            <td className='px-8 py-4'>
+                Pyszna kawa
+                <br />
+                {/* <span className="badge badge-ghost badge-sm">Desktop Support Technician</span> */}
+            </td>
+            <td className='px-8 py-4'>99,99zł</td>
+        </tr>
     )
 }
+export default DashboardRow;
