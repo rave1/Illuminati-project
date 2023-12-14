@@ -44,7 +44,7 @@
 
 @media (min-width: 1400px) {
   .main {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .info-p {
     justify-content: center;
@@ -93,7 +93,7 @@
 }
 
 
-.info-bar { 
+.info-bar {
   display: block;
   width: 100%;
   height: 45px;
