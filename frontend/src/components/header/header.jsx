@@ -11,7 +11,7 @@ import UserIcon from '../../icons/UserIcon'
 import Dropdown from '../Dropdown/Dropdown'
 
 export const Header = () => {
-  const { cart: cartItems } = useCart()
+  const { cart: cartItems, totalPrice } = useCart()
   const [cartQuantity, setCartQuantity] = useState(0)
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export const Header = () => {
             <img src={cart} className='cart-logo' />
             <p id="cart-quantity">{cartQuantity}</p>
           </div>
-          <span className="cart-price">$57.00</span>
+          <span className="cart-price">{totalPrice.toFixed(2)} zł</span>
         </Link>
         <button className='flex justify-items-center items-center w-full relative'>
           <UserIcon/>
