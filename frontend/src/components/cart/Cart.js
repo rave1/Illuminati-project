@@ -63,7 +63,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
         </div>
         <Link to='order'>
         <button onClick={() => placeOrder(cart)} className="drop-shadow-lg m-6 transition ease-in-out rounded bg-amber-200 font-mono p-4 mx-8 text-xl hover:bg-amber-500">
-       
+
           Złóż zamówienie
           </button></Link>
       </div>
