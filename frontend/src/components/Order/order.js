@@ -45,7 +45,7 @@ export const Order = () => {
             <input type="text" id="city" name="city" value={formData.city} onChange={handleInputChange} required
               className="w-full px-3 py-2 border bg-white border-gray-300 rounded mb-3 focus:outline-none focus:border-blue-500"
             />
-            
+
             <label className="block mb-2" htmlFor="street">Street:</label>
             <input type="text" id="street" name="street" value={formData.street} onChange={handleInputChange} required
               className="w-full px-3 py-2 border bg-white border-gray-300 rounded mb-3 focus:outline-none focus:border-blue-500"
