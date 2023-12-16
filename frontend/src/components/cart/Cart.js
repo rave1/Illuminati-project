@@ -4,6 +4,8 @@ import RemoveFromCartButton from './RemoveFromCartButton'
 import QuantityControl from './QuantityControl'
 import Cup from '../../images/Cup.png'
 import { useCart } from './CartContext'
+import { Outlet, Link } from 'react-router-dom'
+
 
 const Cart = ({ cart, removeFromCart, updateQuantity }) => {
   console.log(cart)
@@ -59,7 +61,11 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
           <span className='mx-4'>Total</span>
           <span className='mx-4'>{totalPrice.toFixed(2)} zł</span>
         </div>
-        <button onClick={() => placeOrder(cart)} className="drop-shadow-lg m-6 transition ease-in-out rounded bg-amber-200 font-mono p-4 mx-8 text-xl hover:bg-amber-500">Złóż zamówienie</button>
+        <Link to='order'>
+        <button onClick={() => placeOrder(cart)} className="drop-shadow-lg m-6 transition ease-in-out rounded bg-amber-200 font-mono p-4 mx-8 text-xl hover:bg-amber-500">
+
+          Złóż zamówienie
+          </button></Link>
       </div>
     </div>
     </div>
