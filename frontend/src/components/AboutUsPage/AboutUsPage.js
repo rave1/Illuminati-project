@@ -1,8 +1,9 @@
 import React from 'react'
+import { ContactUsPage } from '../ContactUsPage/ContactUsPage'
 
 export const AboutUsPage = () => {
   return (
-        <div className='bg-brown h-screen flex items-center justify-center'>
+        <div className='h-screen flex items-center justify-center flex-col mt-40'>
            <div className='bg-white w-[1200px] py-8  mx-auto- flex justify-center drop-shadow-2xl rounded-md'>
             <table className="rounded-md bg-white text-black drop-shadow-lg overflow-hidden w-[900px]">
               <thead className=''>
@@ -22,6 +23,7 @@ export const AboutUsPage = () => {
               </tbody>
             </table>
           </div>
+          <ContactUsPage/>
         </div>
   )
 }

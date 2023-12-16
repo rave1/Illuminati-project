@@ -49,16 +49,16 @@ const main = () => {
   }, [])
 
   return (
-    <div className='main-container'>
+    <div className='main-container w-screen'>
       {/* <div className='left-section'>
       </div> */}
-      <div className="grid gap-4 mt-40">
+      <div className="grid gap-4 mt-40 w-screen">
         <div>
           <div className=''>
               <p className='info-p'>Popular categories</p>
             </div>
-            <div className='container grid gap-4'>
-                <div className='grid gap-4 grid-cols-1 md:grid-cols-2'>
+            <div className='container grid gap-4 w-screen'>
+                <div className='grid gap-4 grid-cols-5 w-screen mx-32'>
                   {products.map((products) => {
                     return (
                       <ProductComponent key={products.id} {...products} addToCart={addToCart} />

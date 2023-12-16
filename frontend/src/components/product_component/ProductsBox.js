@@ -53,7 +53,7 @@ const AppContainer = () => {
   return (
     <CartProvider>
       <div className="app">
-        <div className="grid gap-5 grid-cols-2">
+        <div className="grid gap-5 grid-cols-5">
           {products.map((product) => (
             <ProductComponent key={product.id} {...product} addToCart={addToCart} />
           ))}

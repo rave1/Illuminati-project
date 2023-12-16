@@ -3,6 +3,7 @@ import './Product_component.css'
 import AddToCartButton from '../cart/AddToCartButton'
 import QuantityControl from '../cart/QuantityControl'
 import { useCart } from '../cart/CartContext'
+import cup from '../../images/Cup.png'
 
 export const ProductComponent = (props) => {
   const { id, name, price, quantity, description, image } = props
@@ -32,9 +33,9 @@ export const ProductComponent = (props) => {
   }
 
   return (
-    <div className='product_component_box flex flex-col rounded-lg'>
+    <div className='product_component_box flex flex-col rounded-lg text-black'>
       <div className='image-container'>
-         <a href=''><img src={image} alt="Product-Image" className='Product-Image'/></a>
+         <a href=''><img src={cup} alt="Product-Image" className='Product-Image'/></a>
       </div>
 
       <div className='product_component_box_info_all'>

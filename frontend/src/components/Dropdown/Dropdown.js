@@ -1,6 +1,11 @@
 import { Menu } from '@headlessui/react'
+import { useAuth } from '../../context/useAuth';
 
 const Dropdown = () => {
+  function logout(){
+    localStorage.removeItem('token');
+  }
+  const {token} = useAuth()
   return (
     <Menu>
     {({ open }) => (
@@ -29,7 +34,34 @@ const Dropdown = () => {
                       ? 'bg-gray-100 text-gray-900'
                       : 'text-gray-700'
                       } block px-4 py-2 text-sm`}
-                    href="/documentation"
+                    href="/login"
+                  >
+                    Login
+                  </a>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ token }) => (
+                  <a
+                    className={`${!token
+                      ? 'bg-gray-100 text-gray-900'
+                      : 'text-gray-700'
+                      } block px-4 py-2 text-sm`}
+                    href="/register"
+                  >
+                    Register
+                  </a>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <a
+                    className={`${active
+                      ? 'bg-gray-100 text-gray-900'
+                      : 'text-gray-700'
+                      } block px-4 py-2 text-sm`}
+                    href="/"
+                    onClick={logout}
                   >
                     Logout
                   </a>
