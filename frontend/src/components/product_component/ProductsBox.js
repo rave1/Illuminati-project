@@ -6,7 +6,7 @@ import { CartProvider } from '../cart/CartContext'
 import axios from 'axios'
 
 const AppContainer = () => {
-  const initialCart = JSON.parse(localStorage.getItem('cart')) || []
+  const initialCart = JSON.parse(localStorage.getItem('orderItems')) || []
   const [cart, setCart] = useState(initialCart)
 
   const addToCart = (product) => {
@@ -47,7 +47,7 @@ const AppContainer = () => {
       setProducts(result.data.results);
     })
     .catch((error) => console.log(error))
-    localStorage.setItem('cart', JSON.stringify(cart))
+    localStorage.setItem('orderItems', JSON.stringify(cart))
   }, [cart])
 
   return (

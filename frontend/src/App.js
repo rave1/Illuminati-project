@@ -25,12 +25,12 @@ function App () {
           <Routes>
             <Route path='/' element={<CartProvider><Header /></CartProvider>}>
                 <Route index element={<Main />} />
-                <Route path='shop' element={<ShopPage />} />
-                <Route path='pages' element={<PagesPage />} />
-                <Route path='aboutus' element={<AboutUsPage />} />
-                <Route path='contactus' element={<ContactUsPage />} />
-                <Route path='cart' element={<CartPage />} />
-                <Route path='/order' element={<Order />} />
+                <Route path='/shop' element={<ShopPage />} />
+                <Route path='/pages' element={<PagesPage />} />
+                <Route path='/aboutus' element={<AboutUsPage />} />
+                <Route path='/contactus' element={<ContactUsPage />} />
+                <Route path='/cart' element={<CartPage />} />
+                <Route path='/cart/order' element={<Order />} />
                 <Route path='/dashboard' element={<OrderTable/>}/>
                 <Route path='/register' element={<RegisterForm />}/>
                 <Route path='/login' element={<LoginForm />}/>
