@@ -18,7 +18,7 @@ const Cart = () => {
     )
   }
 
- 
+
   const [cartQuantity, setCartQuantity] = useState(0)
 
   function placeOrder (cart) {
