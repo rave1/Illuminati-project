@@ -7,7 +7,8 @@ import { useCart } from './CartContext'
 import { Outlet, Link } from 'react-router-dom'
 
 
-const Cart = ({ cart, removeFromCart, updateQuantity }) => {
+const Cart = () => {
+  const { cart, updateQuantity, removeFromCart, totalPrice } = useCart()
   console.log(cart)
   if (!cart) {
     return (
@@ -17,7 +18,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
     )
   }
 
-  const { cart: cartItems, totalPrice } = useCart()
+ 
   const [cartQuantity, setCartQuantity] = useState(0)
 
   function placeOrder (cart) {
