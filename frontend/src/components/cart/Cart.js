@@ -29,7 +29,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
   }
 
   return (
-      <div className='bg-brown h-screen flex items-center justify-center text-black'>
+      <div className='h-screen flex items-center justify-center text-black'>
       <div className='bg-white w-[1200px] py-8  mx-auto flex flex-row items-center justify-center drop-shadow-2xl rounded-md'>
       <ul className='rounded-md bg-white text-black drop-shadow-lg overflow-hidden w-[750px]'>
         {cart.map((item) => (

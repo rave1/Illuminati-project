@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useAuth } from '../../context/useAuth'
+import { redirect, useNavigate } from 'react-router-dom';
 
 export const Order = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ export const Order = () => {
     zip_code: ''
   })
   const { token } = useAuth()
+  const navigate = useNavigate()
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -39,6 +41,7 @@ export const Order = () => {
 
       console.log('Order placed:', response.data)
       localStorage.removeItem('orderItems')
+      navigate('/cart/order/orderdone')
     } catch (error) {
       console.error('Order placement failed', error)
 

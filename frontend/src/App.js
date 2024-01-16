@@ -14,6 +14,7 @@ import { AuthProvider } from './context/useAuth'
 import LoginForm from './components/LoginForm/LoginForm'
 import Dropdown from './components/Dropdown/Dropdown'
 import OrderTable from './components/DashboardPage/DashboardPage'
+import { AfterOrderPage } from './components/AfterOrderPage/AfterOrderPage.jsx'
 
 
 
@@ -34,6 +35,7 @@ function App () {
                 <Route path='/dashboard' element={<OrderTable/>}/>
                 <Route path='/register' element={<RegisterForm />}/>
                 <Route path='/login' element={<LoginForm />}/>
+                <Route path='/cart/order/orderdone' element={<AfterOrderPage />}/>
               </Route>
           </Routes>
         </Router>
