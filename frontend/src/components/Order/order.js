@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import axios from 'axios'
+import { useAuth } from '../../context/useAuth'
 
 export const Order = () => {
   const [formData, setFormData] = useState({
@@ -7,24 +9,48 @@ export const Order = () => {
     phoneNumber: '',
     email: '',
     street: '',
-    houseNumber: '',
+    house_number: '',
     city: '',
-    province: '',
-    postalCode: '',
-  });
+    zip_code: ''
+  })
+  const { token } = useAuth()
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
-    }));
-  };
+      [name]: value
+    }))
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Order placed:', formData);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const orderItems = JSON.parse(localStorage.getItem('orderItems'))
+    const orderData = {
+      ...formData,
+      products_ids: orderItems.map(({ id, quantity }) => ({ id, quantity }))
+    }
+    try {
+      const response = await axios.post(`http://${process.env.REACT_APP_BACKEND}/shop/order/`, orderData, {
+        headers: {
+          token: token
+        }
+      })
+
+      console.log('Order placed:', response.data)
+      localStorage.removeItem('orderItems')
+    } catch (error) {
+      console.error('Order placement failed', error)
+
+      if (error.response) {
+        console.error('Server responded with:', error.response.data)
+      } else if (error.request) {
+        console.error('Request was not sent:', error.request)
+      } else {
+        console.error('Error during request processing:', error.message)
+      }
+    }
+  }
 
   return (
     <div className='bg-brown h-screen flex items-center text-black justify-center mt-20'>
@@ -63,16 +89,15 @@ export const Order = () => {
               className="w-full px-3 py-2 border bg-white border-gray-300 rounded mb-3 focus:outline-none focus:border-blue-500"
             />
 
-            <label className="block mb-2" htmlFor="postalCode">Postal Code:</label>
-            <input type="text" id="postalCode" name="postalCode" value={formData.postalCode} onChange={handleInputChange} required
+            <label className="block mb-2" htmlFor="postalCode">Zip Code:</label>
+            <input type="text" id="zip_code" name="zip_code" value={formData.postalCode} onChange={handleInputChange} required
               className="w-full px-3 py-2 border bg-white border-gray-300 rounded mb-3 focus:outline-none focus:border-blue-500"
             />
 
             <label className="block mb-2" htmlFor="houseNumber">House Number:</label>
-            <input type="text" id="houseNumber" name="houseNumber" value={formData.houseNumber} onChange={handleInputChange} required
+            <input type="text" id="house_number" name="house_number" value={formData.houseNumber} onChange={handleInputChange} required
               className="w-full px-3 py-2 border bg-white border-gray-300 rounded mb-3 focus:outline-none focus:border-blue-500"
             />
-
 
           </div>
 
@@ -80,5 +105,5 @@ export const Order = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}

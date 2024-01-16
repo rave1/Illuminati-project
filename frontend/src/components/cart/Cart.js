@@ -25,6 +25,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
       console.log(cart)
       console.log(cart.map(({ a }) => a))
     }
+    localStorage.setItem('orderItems', JSON.stringify(cart));
   }
 
   return (

@@ -13,7 +13,7 @@ export const useCart = () => {
 }
 
 export const CartProvider = ({ children }) => {
-  const initialCart = JSON.parse(localStorage.getItem('cart')) || []
+  const initialCart = JSON.parse(localStorage.getItem('orderItems')) || []
   const [cart, setCart] = useState(initialCart)
 
   const addToCart = (product) => {
@@ -37,7 +37,7 @@ export const CartProvider = ({ children }) => {
           }
           return item
         })
-        localStorage.setItem('cart', JSON.stringify(updatedCart))
+        localStorage.setItem('orderItems', JSON.stringify(updatedCart))
         return updatedCart
       })
     }
@@ -46,7 +46,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter(item => item.id !== productId)
     setCart(prevCart => {
-      localStorage.setItem('cart', JSON.stringify(updatedCart))
+      localStorage.setItem('orderItems', JSON.stringify(updatedCart))
       return updatedCart
     })
   }
@@ -54,8 +54,8 @@ export const CartProvider = ({ children }) => {
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0)
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-    console.log('CartProvider - cart:', cart)
+    localStorage.setItem('orderItems', JSON.stringify(cart))
+    console.log('CartProvider - orderItems:', cart)
     console.log('CartProvider - updateQuantity:', updateQuantity)
   }, [cart])
 
