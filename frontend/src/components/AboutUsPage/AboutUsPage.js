@@ -16,10 +16,10 @@ export const AboutUsPage = () => {
               <tbody>
                 <tr className=''>
                   <th className='py-3 px-4 text-center'>
-                    <span className='text-black text-md self-start'>Witajcie w świecie kawy, gdzie każde ziarno to opowieść 
-                    o smaku i aromacie. Jesteśmy pasjonatami, którzy oferują nie tylko kawę, ale prawdziwe doświadczenie 
-                    zmysłów. Nasze starannie wyselekcjonowane ziarna są palone z miłością, dostarczając niezapomnianych chwil 
-                    relaksu. Wierzymy w zrównoważony rozwój i sprawiedliwe warunki, tworząc etyczną kawową podróż. Dołącz do 
+                    <span className='text-black text-md self-start'>Witajcie w świecie kawy, gdzie każde ziarno to opowieść
+                    o smaku i aromacie. Jesteśmy pasjonatami, którzy oferują nie tylko kawę, ale prawdziwe doświadczenie
+                    zmysłów. Nasze starannie wyselekcjonowane ziarna są palone z miłością, dostarczając niezapomnianych chwil
+                    relaksu. Wierzymy w zrównoważony rozwój i sprawiedliwe warunki, tworząc etyczną kawową podróż. Dołącz do
                     nas, odkrywaj różnorodność smaków i ciesz się kawowym rytuałem z nami!</span>
                   </th>
                 </tr>
