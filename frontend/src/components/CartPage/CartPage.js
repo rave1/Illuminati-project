@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
 
 const CartPage = () => {
-  const initialCart = JSON.parse(localStorage.getItem('cart')) || [];
+  const initialCart = JSON.parse(localStorage.getItem('orderItems')) || [];
   const [cart, setCart] = useState(initialCart);
 
   const removeFromCart = (productId) => {
@@ -26,7 +26,7 @@ const CartPage = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('orderItems', JSON.stringify(cart));
   }, [cart]);
 
   return (
