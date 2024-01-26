@@ -33,19 +33,21 @@ export const ProductComponent = (props) => {
   }
 
   return (
-    <div className='product_component_box flex flex-col rounded-lg text-black'>
+    <div className='product_component_box flex flex-col rounded-lg text-black drop-shadow-lg'>
       <div className='image-container'>
-         <a href=''><img src={cup} alt="Product-Image" className='Product-Image'/></a>
+         <a href=''>
+          <img src={`/static/${image}`} /*src={cup}*/ alt="Product-Image" className='Product-Image'/>
+         </a>
       </div>
 
-      <div className='product_component_box_info_all'>
-        <div className='w-full'>
+      
+        <div className='w-full flex items-center justify-evenly h-16 font-bold'>
           <a href=''>
           <h2>{name}</h2></a>
           <h3>{price} zł</h3>
         </div>
-      </div>
-        <div className='product_component_box_info_buttons p-10'>
+      
+        <div className='flex flex-row items-center  m-3 w-full'>
           <QuantityControl
           quantity={productQuantity}
           onDecrease={handleDecreaseQuantity}

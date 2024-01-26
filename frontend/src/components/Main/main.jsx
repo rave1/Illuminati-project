@@ -49,37 +49,10 @@ const main = () => {
   }, [])
 
   return (
-    <div className='main-container w-screen'>
-      {/* <div className='left-section'>
-      </div> */}
-      <div className="grid gap-4 mt-40 w-screen">
-        <div>
-          <div className=''>
-              <p className='info-p'>Popular categories</p>
+    <div className='h-screen flex items-center justify-center flex-col  '>
+           <div className='bg-white w-[1200px] py-8  mx-auto- flex justify-center drop-shadow-2xl rounded-md mt-24 mb-10'>
             </div>
-            <div className='container grid gap-4 w-screen'>
-                <div className='grid gap-4 grid-cols-5 w-screen mx-32'>
-                  {products.map((products) => {
-                    return (
-                      <ProductComponent key={products.id} {...products} addToCart={addToCart} />
-                    )
-                  })}
-                </div>
             </div>
-          </div>
-
-          <div className=''>
-              <p className='info-p'>Popular Product</p>
-            </div>
-            <div className='container grid gap-4'>
-                <div className='popular-main'>
-                <AppContainer/>
-                </div>
-            </div>
-        </div>
-      {/* <div className='right-section'>
-      </div> */}
-    </div>
   )
 }
 
