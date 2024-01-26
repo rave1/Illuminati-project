@@ -40,13 +40,13 @@ export const ProductComponent = (props) => {
          </a>
       </div>
 
-      
+
         <div className='w-full flex items-center justify-evenly h-16 font-bold'>
           <a href=''>
           <h2>{name}</h2></a>
           <h3>{price} zł</h3>
         </div>
-      
+
         <div className='flex flex-row items-center  m-3 w-full'>
           <QuantityControl
           quantity={productQuantity}
