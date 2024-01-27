@@ -23,7 +23,7 @@ export const Header = () => {
     <>
     <div className="header">
       <div className="left-section">
-        <Link to='/'><img src={logo} alt="" className="main-logo" /></Link>
+        <Link to='/shop'><img src={logo} alt="" className="main-logo" /></Link>
       </div>
       <div className="middle-section">
         <input type="text" placeholder='Search' className="search" />
@@ -48,9 +48,10 @@ export const Header = () => {
         <div className="navi-left-side">
           <div className="n-list">
             <ul style={{ listStyleType: 'none' }}>
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
+              {//<li>
+              //  <Link to='/shop'>Home</Link>
+              //</li>
+              }
               <li>
                 <Link to='/shop'>Shop</Link>
               </li>

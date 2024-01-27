@@ -31,17 +31,17 @@ const Cart = () => {
 
   return (
       <div className='h-screen flex items-center justify-center text-black'>
-      <div className='bg-white w-[1200px] py-8  mx-auto flex flex-row items-center justify-center drop-shadow-2xl rounded-md'>
-      <ul className='rounded-md bg-white text-black drop-shadow-lg overflow-hidden w-[750px]'>
+      <div className='bg-white w-full py-8  flex flex-col items-center justify-center drop-shadow-2xl rounded-md md:flex-row md:w-9/12'>
+      <ul className='rounded-md bg-white text-black drop-shadow-lg overflow-hidden w-2/3 md md:w-full'>
         {cart.map((item) => (
-          <li className='rounded-md overflow-hidden bg-amber-100 border px-7 py-5 m-5 flex items-center justify-between drop-shadow-lg' key={item.id}>
-            <div className="flex w-24 h-24 bg-white rounded-md items-center">
+          <li className='rounded-md overflow-hidden bg-amber-100 border px-7 py-5 m-5 flex flex-col items-center justify-between drop-shadow-lg md md:flex-row' key={item.id}>
+            <div className="flex flex-col w-24 h-24 bg-white rounded-md items-center md md:flex-row">
                 <img className='' src={Cup} alt="Item photo" />
                 <span className='px-4 font-bold font-mono'>{item.name}</span>
             </div>
-            <div className='flex items-center '>
+            <div className='flex flex-col items-center md md:flex-row justify-center content-center'>
               <div className='m-5 font-bold px-4 font-mono'>{item.price} zł</div>
-              <div>
+              <div className='flex justify-center items-center'>
               <QuantityControl
                   quantity={item.quantity}
                   onDecrease={() => updateQuantity(item.id, item.quantity - 1)}
